@@ -16,10 +16,6 @@ sitemap ohdrive label="OH Drive"
     Text item=Alpensicht_Index_AA label="Alpensicht [%s]" icon="vacation"
     Text item=AM308V_Activity label="Mähcedes [%s]" icon="lawnmower"
 
-    // OH Drive 2.6.3 - Kamera
-
-    Image item=Garten_Kamera_Snapshot label="Gartenkamera [ohdrive:kamera:Garten_Kamera_Snapshot_Anfordern]" icon="camera"
-
     // Switch item=Wintergarten_Steckdose_Betrieb label="Wintergarten Steckdose" icon="poweroutlet"
     // Switch item=Jochen_Zimmer_Steckdose_Betrieb label="JochenZimmer Steckdose" icon="poweroutlet"
     // Slider item=Schafzimmer_Rollo_Fenster_Rollensteuerung_0offen_100geschlossen label="Schlafzimmer Fenster" icon="rollershutter"
