@@ -6,7 +6,7 @@ OHDrive is an Android Auto application that provides convenient access to select
 
 Whether you want to open your garage door, operate your entrance gate, check the outdoor temperature, or monitor your smart home, OHDrive connects your vehicle with your existing openHAB installation.
 
-Current development version: 2.6.3
+Current development version: 2.6
 
 🚗 What is OHDrive?
 
@@ -253,7 +253,7 @@ VPN
 
 Current development version
 
-2.6.3
+2.6
 
 OHDrive is developed as an Android application using Android Studio.
 
