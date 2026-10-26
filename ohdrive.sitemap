@@ -1,0 +1,45 @@
+﻿sitemap ohdrive label="OH Drive - Android Auto"
+{
+    // OH DRIVE 2.8 - EXAMPLE SITEMAP
+    // Replace example item names with your own openHAB items.
+
+    // 1. LIVE PULSE CONTROLS
+    Switch item=Example_Garage_Pulse label="Garage Door [ohdrive:impuls:live]" icon="garagedoor" mappings=[ON="Pulse"]
+    Switch item=Example_Garden_Gate_Pulse label="Garden Gate [ohdrive:impuls:live]" icon="garage" mappings=[ON="Pulse"]
+    Switch item=Example_Front_Door_Pulse label="Front Door [ohdrive:impuls:live]" icon="door" mappings=[ON="Pulse"]
+
+    // 2. STANDARD PULSE CONTROL
+    Switch item=Example_Pulse label="Pulse Button [ohdrive:impuls]" icon="settings" mappings=[ON="Trigger"]
+
+    // 3. NORMAL ON/OFF SWITCHES
+    Switch item=Example_Outdoor_Plug label="Outdoor Socket" icon="poweroutlet"
+    Switch item=Example_Garden_Lights label="Garden Lights" icon="light"
+
+    // 4. ROLLER SHUTTERS
+    // 100% open, 0% closed
+    Slider item=Example_Shutter_100_Open label="Living Room Shutter [ohdrive:rollo:100offen] [%s]" icon="rollershutter"
+    // 0% open, 100% closed
+    Slider item=Example_Shutter_0_Open label="Bedroom Shutter [ohdrive:rollo:0offen] [%s]" icon="rollershutter"
+    // Default roller shutter
+    Slider item=Example_Shutter_Default label="Kitchen Shutter [%s]" icon="rollershutter"
+
+    // 5. AWNINGS
+    Slider item=Example_Awning_0_Open label="Patio Awning [ohdrive:markise:0offen] [%s]" icon="rollershutter"
+    Slider item=Example_Awning_100_Open label="Garden Awning [ohdrive:markise:100offen] [%s]" icon="rollershutter"
+
+    // 6. TEMPERATURE AND STATUS
+    Text item=Example_Outdoor_Temperature label="Outdoor Temperature [%.1f °C]" icon="temperature"
+    Text item=Example_Indoor_Temperature label="Indoor Temperature [%.1f °C]" icon="temperature"
+    Text item=Example_Rain_Status label="Rain Status [%s]" icon="rain"
+    Text item=Example_Visibility label="Visibility [%s]" icon="vacation"
+    Text item=Example_Mower_Status label="Robot Mower [%s]" icon="lawnmower"
+
+    // 7. MULTI-OPTION MAPPING
+    Switch item=Example_Mode label="Operating Mode" icon="settings" mappings=[0="Off", 1="Eco", 2="Comfort", 3="Auto"]
+
+    // 8. OPTIONAL CAMERA SNAPSHOT
+    // Image item=Example_Camera_Snapshot label="Garden Camera [ohdrive:kamera:Example_Camera_Request]" icon="camera"
+
+    // 9. OPTIONAL MAP TRANSFORMATION
+    // Text item=Example_Rain_Status label="Rain [MAP(yes_no.map):%s]" icon="rain"
+}
