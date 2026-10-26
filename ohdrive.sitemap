@@ -37,9 +37,6 @@
     // 7. MULTI-OPTION MAPPING
     Switch item=Example_Mode label="Operating Mode" icon="settings" mappings=[0="Off", 1="Eco", 2="Comfort", 3="Auto"]
 
-    // 8. OPTIONAL CAMERA SNAPSHOT
-    // Image item=Example_Camera_Snapshot label="Garden Camera [ohdrive:kamera:Example_Camera_Request]" icon="camera"
-
-    // 9. OPTIONAL MAP TRANSFORMATION
+    // 8. OPTIONAL MAP TRANSFORMATION
     // Text item=Example_Rain_Status label="Rain [MAP(yes_no.map):%s]" icon="rain"
 }
