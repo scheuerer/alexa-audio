@@ -1,44 +1,25 @@
-﻿# Changelog
+Changelog
+OHDrive 3.0.0 — October 28, 2026
+OHDrive 3.0 marks a milestone for controlling and monitoring openHAB from Android Auto. It brings together the familiar in-car dashboard, configurable sitemap-based controls, a mobile sitemap editor, and remote access through myopenHAB Cloud.
+myopenHAB Cloud connectivity
+OHDrive can now connect to an openHAB system through myopenHAB Cloud, allowing users to access their home automation setup when they are away from their local Wi-Fi network. Instead of relying solely on a local network address, users can configure a cloud connection to reach their openHAB installation over the internet.
 
-All notable changes to OH Drive are documented in this file.
+This is especially useful on the road: the Android Auto interface can display openHAB item states and send supported control commands even when the phone is connected through mobile data. The connection was tested against an online myopenHAB-enabled test system, and a socket was successfully switched using the phone's head-unit emulator. Item values were also reported to display correctly.
 
-## [2.8] - 2026-10-26
+Cloud access requires a working openHAB Cloud Connector configuration, an online system registered with myopenHAB, and valid account credentials. Availability and response times depend on the internet connection and cloud service.
+Sitemap editor
+The integrated sitemap editor makes it easier to tailor the Android Auto interface without manually rebuilding the app. Users can work with sitemap entries, configure their labels and icons, and adapt the controls shown in OHDrive to their own openHAB items.
 
-### Added
-- Multilingual user interface with German and English support.
-- Language selection in the smartphone settings:
-  - Automatic (system language)
-  - Deutsch
-  - English
-- Language-aware Android Auto labels and status messages.
-- Localized roller shutter position descriptions.
+The editor is intended to support common smart-home use cases such as switches, impulse controls, status displays, and percentage-based controls. Sitemap export allows an edited configuration to be saved locally on the phone for subsequent transfer to the openHAB system.
 
-### Improved
-- Consistent language handling between smartphone settings and Android Auto.
-- Localized feedback for roller shutter operations.
-- Improved separation of user-facing messages and internal command processing.
+Some editor improvements remain under development, including reliable REST saving, item search and suggestions, consistent alignment of newly added entries, and easier discovery of sitemap files stored in the openHAB sitemaps directory. These are not claimed as completed fixes in 3.0.
+Android Auto experience
+- Display openHAB item states in a car-friendly tile layout.
+- Use configurable icons and labels supplied by the sitemap.
+- Operate supported devices such as switches and impulse-controlled relays.
+- Monitor home information, including temperatures and weather-related values where configured.
+- Use the existing tested Android Auto workflow with the phone's head-unit emulator.
+Release notes
+Version 3.0.0 is based on the successfully tested OHDrive 2.9.27 codebase. The final version-number update does not introduce additional functional code changes. The separately tested 3.0 release candidate used a different package identifier and is not the basis of this build.
 
-### Maintained
-- openHAB connectivity using the configured server.
-- Sitemap-based Android Auto controls.
-- Live relay status updates.
-- Garage, gate, door and other openHAB item controls.
-- Roller shutter command handling and STOP safety logic.
-- Existing relay pulse handling and safety warnings.
-
-### Testing
-- German and English verified in smartphone settings.
-- German and English verified in the Android Auto emulator.
-- Physical vehicle testing is still pending.
-
-## [2.7] - 2026-10-26
-
-### Previous release
-- Previous functional baseline for OH Drive.
-- Android Auto integration with openHAB.
-- Sitemap-based item display and control.
-- Live status updates and relay pulse handling.
-
----
-
-OH Drive is an independent community project for openHAB and Android Auto.
+The APK built using assembleDebug is a debug-signed build intended for testing and sideloading. It is not a production-signed Google Play release. Android Auto availability on individual phones and head units may vary.
