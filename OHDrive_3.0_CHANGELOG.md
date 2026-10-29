@@ -31,5 +31,3 @@ Some editor improvements remain under development, including reliable REST savin
 ### Release notes
 
 Version 3.0.0 is based on the successfully tested OHDrive 2.9.27 codebase. The final version-number update does not introduce additional functional code changes. The separately tested 3.0 release candidate used a different package identifier and is not the basis of this build.
-
-The APK built using `assembleDebug` is a debug-signed build intended for testing and sideloading. It is not a production-signed Google Play release. Android Auto availability on individual phones and head units may vary.
