@@ -178,23 +178,6 @@ Avoid exposing an unsecured openHAB HTTP port to the public internet. Prefer HTT
 
 **Gate tile shows waiting:** This indicates an impulse/command workflow, not confirmation of physical movement.
 
-## Building from source
-
-On Windows, extract the source archive to `C:\OHDrive_3.2`, install the Android SDK and a compatible Java toolchain, and run PowerShell:
-
-```powershell
-Set-Location "C:\OHDrive_3.2"
-$ErrorActionPreference = "Stop"
-$sdk = Join-Path $env:LOCALAPPDATA "Android\Sdk"
-"sdk.dir=$($sdk.Replace('\','/'))" | Set-Content ".\local.properties" -Encoding ASCII
-.\gradlew.bat assembleDebug --console=plain
-if ($LASTEXITCODE -ne 0) { throw "BUILD FAILED" }
-$apk = ".\app\build\outputs\apk\debug\app-debug.apk"
-if (-not (Test-Path $apk)) { throw "APK not found" }
-Copy-Item $apk (Join-Path $env:USERPROFILE "Downloads\OHDrive_3.2.apk") -Force
-```
-
-This creates a **debug APK** in your Downloads folder. It is not a production-signed Google Play release. Copying the APK to a phone and installing it are separate steps.
 
 ## Safety and release notes
 
